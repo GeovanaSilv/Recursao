@@ -119,10 +119,11 @@ public class Ex1 {
        return somaPositvo(++a,--b);
     }
 
+ 
     public static int subNum(int a , int b){
-        if(a==0)return b;
+        if(b==0)return a;
 
-        if(ehNegativo(a))
+        if(ehNegativo(b))
             return  subNum(++a,++b);
 
         return   subNum(--a,--b);
@@ -133,7 +134,13 @@ public class Ex1 {
 
        return subNum(a,b);
     }
+    
+      public static int multiplica(int a , int b){
+      if(b==0)return b;
+     return soma(a,multiplica(a,--b));
+  }
   
+
 
 
 }
